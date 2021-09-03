@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailUserActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="211dp"
+            android:layout_height="341dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:scaleType="centerCrop"
+            app:civ_border_width="2dp"
+            tools:src="@tools:sample/avatars" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:layout_marginBottom="10dp"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/tv_followers"
+                    style="@style/TextValue"
+                    tools:text="10020" />
+
+                <TextView
+                    style="@style/TextValue.TextField"
+                    android:layout_below="@+id/tv_followers"
+                    android:text="@string/tvFollowers" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/tv_following"
+                    style="@style/TextValue"
+                    tools:text="100" />
+
+                <TextView
+                    style="@style/TextValue.TextField"
+                    android:layout_below="@+id/tv_following"
+                    android:text="@string/tvFollowing" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp">
+
+                <TextView
+                    android:id="@+id/tv_repository"
+                    style="@style/TextValue"
+                    tools:text="10" />
+
+                <TextView
+                    style="@style/TextValue.TextField"
+                    android:layout_below="@+id/tv_repository"
+                    android:text="@string/tvRepository" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/TextUser"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Username"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextUser"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            tools:text="Name"/>
+
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            tools:text="Location"
+            app:drawableStartCompat="@drawable/ic_baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            tools:text="@string/comppany"
+            app:drawableStartCompat="@drawable/ic_baseline_company_24" />
+
+
+
+    </LinearLayout>
+</ScrollView>
